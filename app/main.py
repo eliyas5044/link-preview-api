@@ -9,7 +9,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.get('/')
 @cross_origin()
-def home():
+def index():
   
   # check if url in arg
   if 'url' in request.args:
@@ -21,4 +21,3 @@ def home():
   
   return jsonify(res)
 
-app.run()
